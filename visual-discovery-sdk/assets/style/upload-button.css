@@ -1,0 +1,56 @@
+.upload-button-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.modern-upload-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #6c757d; /* Modern grey */
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-upload-button span {
+  z-index: 1;
+  position: relative;
+}
+
+.modern-upload-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #5a6268, #343a40); /* Darker grey gradient */
+  z-index: 0;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+}
+
+.modern-upload-button:hover::before {
+  transform: scale(1.2);
+}
+
+.modern-upload-button:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modern-upload-button:active {
+  transform: scale(0.98);
+}
+
+.modern-upload-button input[type="file"] {
+  display: none;
+}

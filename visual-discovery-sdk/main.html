@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Discovery SDK Example</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="assets/style/modal.css">
+    <link rel="stylesheet" href="assets/style/upload-button.css">
+    <link rel="stylesheet" href="assets/style/spinner.css">
+</head>
+<body>
+<header>
+    <h1>Visual Discovery SDK Example</h1>
+</header>
+
+<div class="upload-container">
+    <div class="search-bar">
+        <label class="upload-icon" id="upload-modal-trigger">
+            <img src="https://acp-magento.appspot.com/images/visual-discovery/visual_discovery_camera_black.svg" alt="Upload"/>
+        </label>
+        <input type="text" id="search-input" placeholder="Search for products by keyword..."/>
+        <button id="search-button">
+            <img src="assets/search-icon.svg" alt="Search"/>
+        </button>
+    </div>
+</div>
+
+<!-- Image Upload Modal -->
+<div id="upload-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close-button">&times;</span>
+        </div>
+        <div class="modal-upload-header">
+            <div class="modal-upload-header-container">
+                <div class="modal-upload-header-container-wrap">
+                    <h2>Search by Photo</h2>
+                    <p>Drag and drop a photo or</p>
+                    <div class="upload-button-wrapper">
+                        <label for="image-upload" class="modern-upload-button">
+                            <span>Upload Image</span>
+                            <input type="file" id="image-upload" class="hidden" accept="image/*" hidden/>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="second-header">
+            <button id="back-to-gallery" class="modern-button">⬅ Back to Gallery</button>
+</div>
+            <!-- Left Section: Image Upload -->
+            <div class="modal-left" id="modal-left-section">
+                <div id="modal-image-preview"></div>
+            </div>
+
+            <!-- Right Section: Product Results -->
+            <div class="modal-right hidden" id="results-section">
+                <h2 id="results-title">Search Results</h2>
+                <div id="product-list"></div>
+                <div id="loading-spinner" class="hidden">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fast Simon SDK Configuration -->
+<script>
+    window.__fast_simon_sdk_config = {
+        store_uuid: "ea4433e9-e414-42e8-9d5d-627839852113", // Example UUID
+        store_id: 7088537651, // Example Store ID
+        type: "SPA", // Specify SPA or MPA for reporting
+        onReady: () => {
+            console.log("Fast Simon SDK is ready!");
+        }
+    };
+</script>
+
+<!-- Load Fast Simon SDK -->
+<script src="https://assets.fastsimon.com/sdk/latest/fast_simon_sdk.js" defer></script>
+
+<!-- Application Script -->
+<script src="main.js"></script>
+<script src="utils/image.js"></script>
+<script src="utils/modal.js"></script>
+
+</body>
+</html>

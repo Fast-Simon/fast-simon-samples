@@ -1,0 +1,262 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Modal Layout */
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.modal-left,
+.modal-right {
+    width: 100%;
+    padding: 1rem;
+}
+
+#modal-left-section {
+    display: flex;
+    justify-content: center;
+}
+
+#modal-image-preview {
+    max-width: 100%;
+    max-height: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-left-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+#results-section {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#loading-spinner {
+    display: none;
+}
+
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* Back to Gallery Button */
+#back-to-gallery {
+    margin-bottom: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (min-width: 768px) {
+    .modal-left,
+    .modal-right {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal-left,
+    .modal-right {
+        width: 100%;
+    }
+}
+
+
+  /* Upload/Search Bar */
+  .upload-container {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .search-bar input[type="text"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+
+  .search-bar input[type="text"]::placeholder {
+    color: #aaa;
+  }
+
+  .search-bar .upload-icon {
+    background-color: #f1f1f1;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .search-bar .upload-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .search-bar #search-button {
+    background-color: #3f3f3f;
+    border: none;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .search-bar #search-button:hover {
+    background-color: #000000;
+  }
+
+  .search-bar #search-button img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Image Preview */
+  #image-preview {
+    margin: 1.5rem auto;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  #image-preview img {
+    max-width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Product Results */
+  #product-results {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 800px;
+    text-align: left;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .product {
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    width: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .product img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+
+  .product h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #333;
+  }
+
+  .product p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0;
+  }
+.hidden {
+  display: none;
+}
+.second-header {
+    width: 100%;
+}
+
+/* Modern button styling */
+.modern-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(90deg, #8d8a8a, #3c4248);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+      min-width: 80px;
+    max-height: 40px;
+}
+
+.modern-button:hover {
+    background: linear-gradient(90deg, #8d8a8a, #3c4248);
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.modern-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Optional: Align the button in the modal header */
+.modal-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
