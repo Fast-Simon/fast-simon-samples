@@ -2,7 +2,7 @@ class StateClient {
 
     constructor() {
         this.state = {
-            originSiteURL: window.location.origin,//'https://www.windsorstore.com/',
+            originSiteURL: window.location.origin,
             uploadedImage: null,
             products: [],
             gallery: [],
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
     imageUpload.addEventListener("change", async (event) => {
         const file = event.target.files[0];
         if (!file) return alert("Please upload an image.");
-        window.FastSimonSDK.imageSearch({
+        window.FastSimonSDK.visualSearch({
             fileData: file,
             callback: ({action, payload}) => {
                 stateClient.setState("uploadedImage", payload.imageBase64);
