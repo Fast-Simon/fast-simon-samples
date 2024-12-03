@@ -260,3 +260,17 @@ header {
     border-bottom: 1px solid #ddd;
 }
 
+#modal-image-preview {
+    position: relative;
+    display: inline-block;
+}
+
+.dot {
+    position: absolute;
+}
+
+.bounding-box {
+    position: absolute;
+    display: none;
+    border: 2px solid blue;
+}
